@@ -1,0 +1,84 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eldvél</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        </head>
+        <body>
+            <nav>
+                <li><a href="index.html">Heim</a></li>
+                <li><a href="about.html">Um Okkur</a></li>
+                <li><a href="contact.html">Hafðu Samband</a></li>
+            </nav>  
+        <header>
+        </header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <div class="container">
+                <h1>Eldvél (Reikna Verð)</h1>
+                <div class="input-group">
+                    <label for="fuel-type">Diesel/Bensín:</label>
+                    <select id="fuel-type" name="fuel-type">
+                        <option value="">-- Vinsamlegast Veldu --</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="bensin">Bensín</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="average-consumption">Meðal Eldsneytis Eyðsla (Lítrar/100km):</label>
+                    <input type="text" id="average-consumption" name="average-consumption" required>
+                </div>
+                <div class="input-group">
+                    <label for="distance">Vegalend (KM):</label>
+                    <input type="text" id="distance" name="distance" required>
+                </div>
+                <div class="butt">
+                    <button type="button" class="btn" onclick="calculateFuelConsumption()">KVEIKJA Í!</button>
+                </div>
+                <div class="result" id="result"></div>
+                <h1>Eldvél (Reikna KM)</h1>
+                <div class="input-group">
+                    <label for="average-consumption1">Meðal Eldsneytis Eyðsla (Lítrar/100km):</label>
+                    <input type="number" id="average-consumption1" step="0.01" min="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="overallPrice1">Peningur sem þú vilt eyða:</label>
+                    <input type="number" id="overallPrice1" min="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="price-per-liter1">Verð af 1L:</label>
+                    <input type="number" id="price-per-liter1" step="0.01" min="0" required>
+                <div class="butt">
+                <button onclick="calculatePriceToKM()">KVEIKJA Í!</button>
+                </div>
+                <div id="result1" class="result"></div>
+                <head>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2GViEsX4KyXKU3dnLy8Z4iDsDo4IT6nI&libraries=places"></script>
+                </head>       
+                    <h1>Eldvél (Reikna Vegalengd)</h1>
+                    <div class="input-group">
+                        <label for="origin">Byrjun</label>
+                        <input type="text" id="origin" placeholder="" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <label for="destination">Endir</label>
+                        <input type="text" id="destination" placeholder="" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <div class="butt">
+                        <button type="button" id="calculateBtn" class="btn">KVEIKJA Í!</button>
+                        </div>
+                    </div>
+                    <div id="result2" class="result"></div>
+                    <script src="script.js"></script>
+                    <div class="container">
+                    <h1>Eldvél (Bensínverð.is)</h1>
+
+                    <iframe src="https://www.bensinverd.is"></iframe>
+                    </div>
+        </div>
+        </body>
+        </html>

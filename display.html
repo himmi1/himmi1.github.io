@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Fetcher</title>
+    <script>
+        function fetchData() {
+            var url = 'fetch_data.php'; // Update with the path to your fetch_data.php file
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert('Data fetched and saved to data.txt');
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fetchData()">Fetch Data and Save to Text File</button>
+</body>
+</html>
