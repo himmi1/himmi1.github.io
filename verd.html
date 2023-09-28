@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sneyti</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="heim.html">Heim</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Reiknivél</a>
+                <div class="dropdown-content">
+                    <a href="verd.html">Reikna verð</a>
+                    <a href="km.html">Reikna KM</a>
+                    <a href="vegalend.html">Fá Vegalengd</a>
+                    <a href="bensinverd.html">Bensínverð.is</a>
+                </div>
+            </li>
+            <li><a href="about.html">Um Okkur</a></li>
+            <li><a href="contact.html">Hafðu Samband</a></li>
+        </ul>
+    </nav>
+<header>
+</header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div class="container">
+        <h1>Sneyti (Reikna Verð)</h1>
+        <div class="input-group">
+            <label for="fuel-type">Diesel/Bensín:</label>
+            <select id="fuel-type" name="fuel-type">
+                <option value="">-- Vinsamlegast Veldu --</option>
+                <option value="diesel">Diesel</option>
+                <option value="bensin">Bensín</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="average-consumption">Meðal Eldsneytis Eyðsla (Lítrar/100km):</label>
+            <input type="text" id="average-consumption" name="average-consumption" required>
+        </div>
+        <div class="input-group">
+            <label for="distance">Vegalend (KM):</label>
+            <input type="text" id="distance" name="distance" required>
+        </div>
+        <div class="butt">
+            <button type="button" class="btn" onclick="calculateFuelConsumption()">KVEIKJA Í!</button>
+        </div>
+        <div class="result" id="result"></div>
+    </body>
+    </html>

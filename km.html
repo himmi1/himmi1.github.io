@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sneyti</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="heim.html">Heim</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Reiknivél</a>
+                <div class="dropdown-content">
+                    <a href="verd.html">Reikna verð</a>
+                    <a href="km.html">Reikna KM</a>
+                    <a href="vegalend.html">Fá Vegalengd</a>
+                    <a href="bensinverd.html">Bensínverð.is</a>
+                </div>
+            </li>
+            <li><a href="about.html">Um Okkur</a></li>
+            <li><a href="contact.html">Hafðu Samband</a></li>
+        </ul>
+    </nav>
+<header>
+</header>
+<div class="container">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<h1>Sneyti (Reikna KM)</h1>
+<div class="input-group">
+    <label for="fuel-type1">Diesel/Bensín:</label>
+    <select id="fuel-type1" name="fuel-type1">
+        <option value="">-- Vinsamlegast Veldu --</option>
+        <option value="diesel">Diesel</option>
+        <option value="bensin">Bensín</option>
+    </select>
+</div>
+<div class="input-group">
+    <label for="average-consumption1">Meðal Eldsneytis Eyðsla (Lítrar/100km):</label>
+    <input type="number" id="average-consumption1" step="0.01" min="0" required>
+</div>
+<div class="input-group">
+    <label for="budget">Peningur sem þú vilt eyða:</label>
+    <input type="number" id="budget" min="0" required>
+</div>
+<div class="butt">
+    <button type="button" class="btn" onclick="calculateDistanceWithFuelBudget()">KVEIKJA Í!</button>
+</div>
+<div id="result1" class="result"></div>
+</div>
+    </body>
+    </html>
