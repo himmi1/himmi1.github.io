@@ -27,74 +27,9 @@
             </nav>
         <header>
         </header>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <div class="container">
-                <h1>Sneyti (Reikna Verð)</h1>
-                <div class="input-group">
-                    <label for="fuel-type">Diesel/Bensín:</label>
-                    <select id="fuel-type" name="fuel-type">
-                        <option value="">-- Vinsamlegast Veldu --</option>
-                        <option value="diesel">Diesel</option>
-                        <option value="bensin">Bensín</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="average-consumption">Meðal Eldsneytis Eyðsla (Lítrar/100km):</label>
-                    <input type="text" id="average-consumption" name="average-consumption" required>
-                </div>
-                <div class="input-group">
-                    <label for="distance">Vegalend (KM):</label>
-                    <input type="text" id="distance" name="distance" required>
-                </div>
-                <div class="butt">
-                    <button type="button" class="btn" onclick="calculateFuelConsumption()">KVEIKJA Í!</button>
-                </div>
-                <div class="result" id="result"></div>
-                <h1>Sneyti (Reikna KM)</h1>
-                <div class="input-group">
-                    <label for="fuel-type1">Diesel/Bensín:</label>
-                    <select id="fuel-type1" name="fuel-type1">
-                        <option value="">-- Vinsamlegast Veldu --</option>
-                        <option value="diesel">Diesel</option>
-                        <option value="bensin">Bensín</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="average-consumption1">Meðal Eldsneytis Eyðsla (Lítrar/100km):</label>
-                    <input type="number" id="average-consumption1" step="0.01" min="0" required>
-                </div>
-                <div class="input-group">
-                    <label for="budget">Peningur sem þú vilt eyða:</label>
-                    <input type="number" id="budget" min="0" required>
-                </div>
-                <div class="butt">
-                    <button type="button" class="btn" onclick="calculateDistanceWithFuelBudget()">KVEIKJA Í!</button>
-                </div>
-                <div id="result1" class="result"></div>
-                <head>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2GViEsX4KyXKU3dnLy8Z4iDsDo4IT6nI&libraries=places"></script>
-                </head>       
-                    <h1>Sneyti (Reikna Vegalengd)</h1>
-                    <div class="input-group">
-                        <label for="origin">Byrjun</label>
-                        <input type="text" id="origin" placeholder="" autocomplete="off">
-                    </div>
-                    <div class="input-group">
-                        <label for="destination">Endir</label>
-                        <input type="text" id="destination" placeholder="" autocomplete="off">
-                    </div>
-                    <div class="input-group">
-                        <div class="butt">
-                        <button type="button" id="calculateBtn" class="btn">KVEIKJA Í!</button>
-                        </div>
-                    </div>
-                    <div id="result2" class="result"></div>
-                    <script src="script.js"></script>
-                    <div class="container">
-                    <h1>Sneyti (Bensínverð.is)</h1>
-
-                    <iframe src="https://www.bensinverd.is"></iframe>
-                    </div>
+        <div class="container">
+            <h1>SNEYTI</h1>
+            <h3 class="about">Find the cheapest fuel prices in Iceland with our easy-to-use fuel price calculator.</h3>
         </div>
         </body>
         </html>
