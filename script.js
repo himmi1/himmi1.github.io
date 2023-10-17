@@ -28,7 +28,7 @@ function calculateFuelConsumption() {
             }
 
             // Calculate fuel consumption
-            var fuelConsumption = (averageConsumption * distance) / 100;
+            var fuelConsumption = ((averageConsumption * distance) / 100) * 1.25;
 
             // Calculate total cost of fuel
             var totalCost;
