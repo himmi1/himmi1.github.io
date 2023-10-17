@@ -28,7 +28,7 @@ function calculateFuelConsumption() {
             }
 
             // Calculate fuel consumption
-            var fuelConsumption = ((averageConsumption * distance) / 100) * 1.25;
+            var fuelConsumption = (averageConsumption * distance) / 100;
 
             // Calculate total cost of fuel
             var totalCost;
@@ -39,7 +39,7 @@ function calculateFuelConsumption() {
                 name = secondCheapestDiesel.name;
                 company = secondCheapestDiesel.company;
             } else if (fuelType === "bensin") {
-                totalCost = fuelConsumption * parseFloat(secondCheapestBensin.bensin95);
+                totalCost = (fuelConsumption * parseFloat(secondCheapestBensin.bensin95)) * 1.25;
                 name = secondCheapestBensin.name;
                 company = secondCheapestBensin.company;
             }
